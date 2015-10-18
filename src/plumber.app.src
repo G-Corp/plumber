@@ -1,0 +1,16 @@
+{application, plumber,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {modules, []},
+  {applications, [
+                  kernel
+                  , stdlib
+                  , compiler
+                  , goldrush
+                  , lager
+                 ]},
+  {mod, { plumber_app, []}},
+  {env, []}
+ ]}.
