@@ -15,8 +15,7 @@ dev: deps app
 
 rel-dev: deps app
 	@${RM_RF} ../${PROJECT}-dev
-	git clone git@github.com:scalezen-developer/${PROJECT}.git ../${PROJECT}-dev
-	@${CP} rebar.release.config ../${PROJECT}-dev/rebar.config
+	git clone git@github.com:botsunit/${PROJECT}.git ../${PROJECT}-dev
 	@${CP_R} ebin ../${PROJECT}-dev
 	@${CP_R} config ../${PROJECT}-dev
 	@${CP_R} include ../${PROJECT}-dev
