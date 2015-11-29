@@ -1,6 +1,6 @@
 PROJECT = plumber
 
-DEPS = lager 
+DEPS = lager
 DOC_DEPS = edown
 
 dep_lager = git https://github.com/basho/lager.git master
