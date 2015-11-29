@@ -1,3 +1,4 @@
+% @hidden
 -module(plumber_app).
 
 -behaviour(application).

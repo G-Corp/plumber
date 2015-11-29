@@ -1,3 +1,4 @@
+% @hidden
 -module(plumber_sup).
 
 -behaviour(supervisor).

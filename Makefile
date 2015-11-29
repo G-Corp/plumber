@@ -1,24 +1,21 @@
 PROJECT = plumber
 
 DEPS = lager 
-dep_lager = git https://github.com/basho/lager.git master
+DOC_DEPS = edown
 
-CP = cp
-CP_R = cp -r
-RM_RF = rm -rf
-DATE = $(shell date +"%F %T")
+dep_lager = git https://github.com/basho/lager.git master
+dep_edown = git https://github.com/botsunit/edown.git master
 
 include erlang.mk
 
+EDOC_OPTS = {doclet, edown_doclet} \
+						, {app_default, "http://www.erlang.org/doc/man"} \
+						, {source_path, ["src"]} \
+						, {overview, "overview.edoc"} \
+						, {stylesheet, ""} \
+						, {image, ""} \
+						, {top_level_readme, {"./README.md", "https://github.com/botsunit/${PROJECT}"}}
+
 dev: deps app
 	@erl -pa ebin include deps/*/ebin deps/*/include -config config/${PROJECT}.config
-
-rel-dev: deps app
-	@${RM_RF} ../${PROJECT}-dev
-	git clone git@github.com:botsunit/${PROJECT}.git ../${PROJECT}-dev
-	@${CP_R} ebin ../${PROJECT}-dev
-	@${CP_R} config ../${PROJECT}-dev
-	@${CP_R} include ../${PROJECT}-dev
-	cd ../${PROJECT}-dev; git add . 
-	cd ../${PROJECT}-dev; git commit -m "Update ${DATE}"
 

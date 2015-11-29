@@ -12,5 +12,5 @@ erl_crash.dump
 .rebar
 queues
 .erlang.mk
-wok.d
+plumber.d
 xrefr

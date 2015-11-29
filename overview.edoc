@@ -1,0 +1,56 @@
+@author Gregoire Lejeune <gregoire.lejeune@botsunit.com>
+@copyright 2015 Bots Unit, 2015 G-Corp
+@version 1.0.0
+@title plumber
+@doc
+
+<p>This module allow you to deal with memory leak problems, binary and gargabe collection</p>
+
+<p>
+See :
+<ul>
+  <li>http://blog.bugsense.com/post/74179424069/erlang-binary-garbage-collection-a-lovehate</li>
+  <li>https://blog.heroku.com/archives/2013/11/7/logplex-down-the-rabbit-hole</li>
+  <li>http://dieswaytoofast.blogspot.fr/2012/12/erlang-binaries-and-garbage-collection.html</li>
+  <li>https://andy.wordpress.com/2012/02/13/erlang-is-a-hoarder/</li>
+</ul>
+</p>
+
+<p>
+This code is based on logplex_leak.erl <br />
+Copyright (c) 2010-2013 Heroku &lt;jacob.vorreuter@gmail.com&gt;, &lt;nem@erlang.geek.nz&gt;
+</p>
+
+<h2>Usage</h2>
+
+<p>
+Add the following configuration in your application :
+
+<pre>
+{plumber, [
+  {memory_threshold, 10000000000}, # bytes
+  {memory_check_interval, 5}       # minute
+]},
+</pre>
+
+Then start the <tt>plumber</tt> application.
+</p>
+
+<h2>Licence</h2>
+
+<p>
+Copyright (c) 2015, G-Corp &lt;greg@g-corp.io&gt;<br />
+Copyright (c) 2015, Bots Unit &lt;gregoire.lejeune@botsunit.com&gt;<br />
+All rights reserved.
+</p>
+
+<p>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p>
+
+<ol>
+  <li>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</li>
+  <li>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</li>
+</ol>
+
+<p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+
+@end
