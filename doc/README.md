@@ -6,7 +6,7 @@ Copyright (c) 2015 Bots Unit, 2015 G-Corp
 
 __Version:__ 1.0.0
 
-__Authors:__ Gregoire Lejeune ([`gregoire.lejeune@botsunit.com`](mailto:gregoire.lejeune@botsunit.com)).
+__Authors:__ [`jacob.vorreuter@gmail.com`](mailto:jacob.vorreuter@gmail.com), [`nem@erlang.geek.nz`](mailto:nem@erlang.geek.nz), Gregoire Lejeune ([`greg@g-corp.io`](mailto:greg@g-corp.io)), Gregoire Lejeune ([`gregoire.lejeune@botsunit.com`](mailto:gregoire.lejeune@botsunit.com)).
 
 This module allow you to deal with memory leak problems, binary and gargabe collection
 
