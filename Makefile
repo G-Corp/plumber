@@ -1,9 +1,10 @@
 PROJECT = plumber
 
-DEPS = lager 
-DOC_DEPS = edown
-
+DEPS = lager doteki
 dep_lager = git https://github.com/basho/lager.git master
+dep_doteki = git https://github.com/botsunit/doteki.git master
+
+DOC_DEPS = edown
 dep_edown = git https://github.com/botsunit/edown.git master
 
 include erlang.mk

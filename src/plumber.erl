@@ -60,9 +60,9 @@ init([]) ->
   Ref = erlang:start_timer(0, self(), gc),
   {ok, #state{
           tref = Ref,
-          threshold = plumber_config:conf([plumber, memory_threshold], ?MEMORY_THRESHOLD),
+          threshold = doteki:get_env([plumber, memory_threshold], ?MEMORY_THRESHOLD),
           check_interval = timer:minutes(
-                             plumber_config:conf(
+                             doteki:get_env(
                                [plumber, memory_check_interval], ?CHECK_INTERVAL))
          }}.
 
